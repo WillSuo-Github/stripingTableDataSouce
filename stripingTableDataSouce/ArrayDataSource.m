@@ -50,7 +50,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:self.tableViewStyle reuseIdentifier:self.cellIdentifier];
     }
     NSString *cellItem = self.souceArr[indexPath.row];
-    self.configureCellBlock(cell,cellItem,indexPath);
+    self.configureCellBlock(cell, cellItem, indexPath);
     return cell;
 }
 

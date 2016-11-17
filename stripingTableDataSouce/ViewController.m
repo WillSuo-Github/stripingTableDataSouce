@@ -41,17 +41,13 @@ static NSString *const kNameCellIdentifier = @"NameCell";
 - (ArrayDataSource *)dataSource
 {
     if (!_dataSource) {
-//        _dataSource = [[ArrayDataSource alloc] initWithItems:self.nameList
-//                                              cellIdentifier:kNameCellIdentifier
-//                                              tableViewStyle:UITableViewCellStyleDefault
-//                                          configureCellBlock:^(UITableViewCell *cell, NSString *item, NSIndexPath *indexPath) {
-//                                              cell.textLabel.text = item;
-//                                          }];
         
-        
-        _dataSource = [[ArrayDataSource alloc] initWithItems:self.nameList cellIdentifier:@"1111" tableViewStyle:UITableViewCellStyleDefault configureCellBlock:^(UITableViewCell *cell, NSString *items, NSIndexPath *indexPath) {
-            cell.textLabel.text = items;
-        }];
+        _dataSource = [[ArrayDataSource alloc] initWithItems:self.nameList
+                                              cellIdentifier:@"1111"
+                                              tableViewStyle:UITableViewCellStyleDefault
+                                          configureCellBlock:^(UITableViewCell *cell, NSString *items, NSIndexPath *indexPath) {
+                                              cell.textLabel.text = items;
+                                          }];
     }
     return _dataSource;
 }
